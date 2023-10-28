@@ -11,10 +11,15 @@ for (i = 0; i <= 15; i++) {
         let row = document.createElement("div");
         row.className = `row ${j}`;
         row.textContent = `row ${j}`;
+
         column.appendChild(row);
 
-
+        row.addEventListener("mouseover", () => {
+            row.style.backgroundColor = "black";
+            console.log("drawing");
+        })
     }
-    
+
     grid.appendChild(column);
 }
+
