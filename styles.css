@@ -1,2 +1,19 @@
 * {font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif}
 
+.column, .row {
+    border: 2px solid red;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+#grid {
+    display: flex;
+    margin: 12px;
+    padding: 48px;
+    
+    border: 2px solid black;
+
+}
