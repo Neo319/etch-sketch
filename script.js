@@ -1,6 +1,7 @@
 console.log ("Hello world!");
 
 const grid = document.getElementById ('grid');
+const newGrid = document.querySelector ('button');
 
 for (i = 0; i <= 15; i++) {
     let column = document.createElement("div");
@@ -20,4 +21,8 @@ for (i = 0; i <= 15; i++) {
 
     grid.appendChild(column);
 }
+
+
+newGrid.addEventListener ("click", makeGrid());
+
 
