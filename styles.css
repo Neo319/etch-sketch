@@ -58,6 +58,9 @@ body {
     max-height: 400px;
 
     flex: 1;
+
+    background-color: #404040;
+
 }
 
 #footer {

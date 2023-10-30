@@ -11,7 +11,8 @@ for (i = 0; i <= 15; i++) {
     
     for (j = 0; j <= 15; j++) {
         let row = document.createElement("div");
-        row.className = `row`;        
+        row.className = `row`;
+        row.style.backgroundColor = "rgb(40, 40, 40)";        
         column.appendChild(row);
         
         row.addEventListener("mouseover", () => {
@@ -44,13 +45,11 @@ function makeGridPrompt() {
             for (y = response; y >= 1; y--) {
                 let row = document.createElement("div");
                 row.className = `row`;
-                // row.textContent = "b";
-                
+                row.style.backgroundColor = "rgb(40, 40, 40)";
+
                 column.appendChild(row);
-                
                 row.addEventListener("mouseover", () => {
                     draw(row);
-                    
                 })
             }
             grid.appendChild(column);
@@ -89,13 +88,22 @@ gradientBtn.addEventListener("click", () => {
 
 function draw (pixel) {
     if (mode === "standard") {
-        pixel.style.backgroundColor = "white";
-        console.log("drawing");
+        pixel.style.backgroundColor = "rgb(255, 255, 255)";
     }
     else if (mode === "rainbow") {
         let randomColor = (Math.floor(Math.random() * 16777215)).toString(16);
         pixel.style.backgroundColor = '#' + randomColor;
-        console.log(`drawing random ${randomColor}`);
+    }
+    else if (mode === "gradient") {
+        let colorBefore = pixel.style.backgroundColor;
+        let [red, green, blue] = colorBefore.match(/\d+/g).map(Number)
+        
+        red += 25;
+        blue += 25;
+        green += 25;
+    
+        let colorAfter = "rgb(" + (red) + ", " + (green) + ", " + (blue) + ")";
+        pixel.style.backgroundColor = colorAfter;
     }
 }
 
