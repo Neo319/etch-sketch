@@ -11,14 +11,11 @@ for (i = 0; i <= 15; i++) {
     
     for (j = 0; j <= 15; j++) {
         let row = document.createElement("div");
-        row.className = `row`;
-        // row.textContent = "a";
-        
+        row.className = `row`;        
         column.appendChild(row);
         
         row.addEventListener("mouseover", () => {
-            row.style.backgroundColor = "white";
-            console.log("drawing");
+            draw(row);
         })
     }
     
@@ -42,18 +39,18 @@ function makeGridPrompt() {
         
         for (x = response; x >= 1; x--) {
             let column = document.createElement("div");
-            column.className = `column ${x}`;            
+            column.className = `column`;            
             
             for (y = response; y >= 1; y--) {
                 let row = document.createElement("div");
-                row.className = `row ${y}`;
+                row.className = `row`;
                 // row.textContent = "b";
                 
                 column.appendChild(row);
                 
                 row.addEventListener("mouseover", () => {
-                    row.style.backgroundColor = "white";
-                    console.log("drawing");
+                    draw(row);
+                    
                 })
             }
             grid.appendChild(column);
@@ -62,3 +59,24 @@ function makeGridPrompt() {
     }
     
 }
+
+const standardBtn = document.getElementById('standard');
+const rainbowBtn = document.getElementById('rainbow');
+const gradientBtn = document.getElementById('gradient');
+
+let mode = "standard";
+
+standardBtn.onclick = mode = "standard";
+rainbowBtn.onclick = mode = "rainbow";
+gradientBtn.onclick = mode = "gradient";
+
+function draw (pixel) {
+    if (mode === "standard") {
+        pixel.style.backgroundColor = "white";
+        console.log("drawing");
+    }
+    else if (mode === "rainbow") {
+        
+    }
+}
+
