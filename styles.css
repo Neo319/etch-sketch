@@ -2,37 +2,68 @@
 
 h1, h3 {
     text-align: center;
+    color: white;
 }
+
+body {
+    background-color: #404040;
+}
+
 
 .button {
     display: flex;
     justify-content: center;
-    
+}
+
+#new {
+    padding: 16px;
+    border-radius: 4px;
+    background-color: #408040;
+    color: White;
+    font-weight: 800;
+    font-size: 20px;
 }
 
 .column {
     display: flex;
     flex-direction: column;
+    align-items: stretch;
+    flex: 1;
+
 }
 
 #grid {
     display: flex;
     justify-content: center;
-    width: fit-content;
+    max-width: 800px;
 
     margin: 48px;
     margin-left: auto;
     margin-right: auto;
     
-    border: 2px solid black;
+    border: 3px solid white;
+    border-radius: 8px;
+    height: 800px;
+    width: 800px;
+
+    /* flex: 1; */
+    
 
 }
 
 .row {
-    height: 50px;
-    width: 50px;
+    max-width: 400px;
+    min-width:8px;
+
+    min-height: 8px;
+    max-height: 400px;
+
+    flex: 1;
+
+
+    /* height: 50px;
+    width: 50px; */
 }
 
-.drawn {
-    background-color: black;
-}
+
+/* * {border: 2px solid red;} */
