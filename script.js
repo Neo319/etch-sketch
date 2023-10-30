@@ -7,11 +7,11 @@ newGrid.addEventListener ("click", () => console.log("button clicked"));
 
 for (i = 0; i <= 15; i++) {
     let column = document.createElement("div");
-    column.className = `column ${i}`;
+    column.className = `column`;
     
     for (j = 0; j <= 15; j++) {
         let row = document.createElement("div");
-        row.className = `row ${j}`;
+        row.className = `row`;
         // row.textContent = "a";
         
         column.appendChild(row);
