@@ -3,8 +3,6 @@ console.log ("Hello world!");
 const grid = document.getElementById ('grid');
 const newGrid = document.querySelector ('button');
 
-newGrid.addEventListener ("click", () => console.log("button clicked"));
-
 for (i = 0; i <= 15; i++) {
     let column = document.createElement("div");
     column.className = `column`;
@@ -67,6 +65,7 @@ const gradientBtn = document.getElementById('gradient');
 const modeDisplay = document.getElementById('modeDisplay');
 
 let mode = "standard";
+modeDisplay.textContent = `Current mode = ${mode}`;
 
 standardBtn.addEventListener("click", () => {
     mode = "standard";

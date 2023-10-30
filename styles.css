@@ -3,6 +3,9 @@
 body {
     background-color: #404040;
     margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #header {
@@ -12,19 +15,24 @@ body {
     color: white;
 }
 
-
-.button {
-    display: flex;
-    justify-content: center;
-}
-
-#new {
+button {
     padding: 16px;
     border-radius: 4px;
     background-color: #408040;
     color: White;
     font-weight: 800;
     font-size: 20px;
+}
+
+#rainbow {background-color:darkorchid;}
+#gradient {background-color: #808080;}
+#modeDisplay {
+    color:white;
+    text-align: center;
+    font-weight: 800;
+    align-self: center;
+    width: 160px;
+
 }
 
 .column {
@@ -60,7 +68,15 @@ body {
     flex: 1;
 
     background-color: #404040;
+}
 
+#sideButtons {
+    display: flex;
+    background-color: #606060;
+    border-radius: 16px;
+    justify-content:center;
+    margin:40px;
+    max-width: 40%;
 }
 
 #footer {
