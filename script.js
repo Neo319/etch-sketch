@@ -60,15 +60,32 @@ function makeGridPrompt() {
     
 }
 
+
+
 const standardBtn = document.getElementById('standard');
 const rainbowBtn = document.getElementById('rainbow');
 const gradientBtn = document.getElementById('gradient');
+const modeDisplay = document.getElementById('modeDisplay');
 
 let mode = "standard";
 
-standardBtn.onclick = mode = "standard";
-rainbowBtn.onclick = mode = "rainbow";
-gradientBtn.onclick = mode = "gradient";
+standardBtn.addEventListener("click", () => {
+    mode = "standard";
+    modeDisplay.textContent = `Current mode = ${mode}`;
+    console.log(mode);
+});
+rainbowBtn.addEventListener("click", () => {
+    mode = "rainbow";
+    modeDisplay.textContent = `Current mode = ${mode}`;
+    console.log(mode);
+});
+gradientBtn.addEventListener("click", () => {
+    mode = "gradient";
+    modeDisplay.textContent = `Current mode = ${mode}`;
+    console.log(mode);
+});
+
+
 
 function draw (pixel) {
     if (mode === "standard") {
@@ -76,7 +93,11 @@ function draw (pixel) {
         console.log("drawing");
     }
     else if (mode === "rainbow") {
-        
+        let randomColor = (Math.floor(Math.random() * 16777215)).toString(16);
+        pixel.style.backgroundColor = '#' + randomColor;
+        console.log(`drawing random ${randomColor}`);
     }
 }
+
+
 
